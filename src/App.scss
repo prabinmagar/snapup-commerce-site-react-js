@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// variables
+$clr-black: #000;
+$clr-white: #fff;
+$clr-orange: #F94E30;
+$clr-light-orange: #FF6433;
+$clr-light-gray: #F2F2F2;
+$clr-light: #F4F4F4;
+$clr-whitesmoke: #F5F5F5;
+$clr-dark: #212529;
+$clr-danger: #DC3545;
+$clr-gray: #929292;
+$font-family-manrope: 'Manrope', sans-serif;
+$font-family-poppins: 'Poppins', sans-serif;
+$transition-ease: all 300ms ease-in-out;
+
+// global styles & resets
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: $font-family-poppins;
+  color: $clr-black;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+h1, h2, h3, h4, h5, h6{
+  text-transform: capitalize;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+button{
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.8rem;
+}
+input, textarea, select{
+    outline: 0;
+    border: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+}
+
+/* custom utility classes */
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* flexbox and grid */
+.flex{
+    display: flex;
+    &-column{ flex-direction: column;}
+    &-wrap{flex-wrap: wrap;}
+}
+.align{
+    &-center{align-items: center;}
+    &-start{align-items: flex-start;}
+    &-end{align-items: flex-end;}
+    &-stretch{align-items: stretch;}
+}
+.justify{
+    &-center{justify-content: center;}
+    &-between{ justify-content: space-between;}
+    &-start{ justify-content: flex-start;}
+    &-end{ justify-content: flex-end;}
+}
+.grid{ display: grid; }
+  
+/* height and width */
+.h-100{height: 100%;}
+.w-100{width: 100%;}
+
+/* text align and transformation */
+.text{
+  &-center{text-align: center;}
+  &-start{text-align: left;}
+  &-end{text-align: right;}
+  &-justify{text-align: justify;}
+  &-uppercase{text-transform: uppercase;}
+  &-capitalize{text-transform: capitalize;}
+  &-orange{color: $clr-orange;}
+  &-light-orange{color: $clr-light-orange;}
+  &-light-gray{color: $clr-light-gray;}
+  &-whitesmoke{color: $clr-whitesmoke;}
+  &-white{color: $clr-white;}
+  &-black{color: $clr-black;}
+  &-dark{color: $clr-dark;}
+  &-gray{color: $clr-gray;}
+  &-danger{color: $clr-danger;}
+}
+
+.bg{
+  &-orange{background-color: $clr-orange;}
+  &-light-orange{background-color: $clr-light-orange;}
+  &-light-gray{background-color: $clr-light-gray;}
+  &-light{background-color: $clr-light;}
+  &-white{background-color: $clr-white;}
+  &-black{background-color: $clr-black;}
+  &-whitesmoke{background-color: $clr-whitesmoke;}
+  &-dark{background-color: $clr-dark;}
+  &-danger{background-color: $clr-danger;}
+  &-gray{background-color: $clr-gray;}
+}
+
+.font{
+    &-poppins{font-family: $font-family-poppins;}
+    &-manrope{font-family: $font-family-manrope;}
+}
+
+/* font weights */
+.fw{
+  &-1{font-weight: 100;}
+  &-2{font-weight: 200;}
+  &-3{font-weight: 300;}
+  &-4{font-weight: 400;}
+  &-5{font-weight: 500;}
+  &-6{font-weight: 600;}
+  &-7{font-weight: 700;}
+  &-8{font-weight: 800;}
+  &-9{font-weight: 900;}
+}
+
+/* common font sizes */
+.fs{
+  &-11{font-size: 11px;}
+  &-12{font-size: 12px;}
+  &-13{font-size: 13px;}
+  &-14{font-size: 14px;}
+  &-15{font-size: 15px;}
+  &-16{font-size: 16px;}
+  &-17{font-size: 17px;}
+  &-18{font-size: 18px;}
+  &-19{font-size: 19px;}
+  &-20{font-size: 20px;}
+  &-21{font-size: 21px;}
+  &-22{font-size: 22px;}
+  &-23{font-size: 23px;}
+  &-24{font-size: 24px;}
+  &-25{font-size: 25px;}
+  &-26{font-size: 26px;}
+}
+
+/* letter spacing */
+.ls-1{letter-spacing: 1px;}
+.ls-1h{letter-spacing: 0.5px;}
+.ls-2{letter-spacing: 2px;}
+.ls-2h{letter-spacing: 1.5px;}
+
+/* margin and padding */
+.mx-auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+.py{
+    &-1{padding-top: 4px; padding-bottom: 4px;}
+    &-2{padding-top: 8px; padding-bottom: 8px;}
+    &-3{padding-top: 16px; padding-bottom: 16px;}
+    &-4{padding-top: 24px; padding-bottom: 24px;}
+    &-5{padding-top: 48px; padding-bottom: 48px;}
+    &-6{padding-top: 60px; padding-bottom: 60px;}
+    &-7{padding-top: 72px; padding-bottom: 72px;}
+}
+.my{
+    &-1{margin-top: 4px; margin-bottom: 4px;}
+    &-2{margin-top: 8px; margin-bottom: 8px;}
+    &-3{margin-top: 16px; margin-bottom: 16px;}
+    &-4{margin-top: 24px; margin-bottom: 24px;}
+    &-5{margin-top: 48px; margin-bottom: 48px;}
+    &-6{margin-top: 60px; margin-bottom: 60px;}
+}
+
+.px{
+  &-1{padding-left: 4px; padding-right: 4px;}
+  &-2{padding-left: 8px; padding-right: 8px;}
+  &-3{padding-left: 16px; padding-right: 16px;}
+  &-4{padding-left: 24px; padding-right: 24px;}
+  &-5{padding-left: 48px; padding-right: 48px;}
+  &-6{padding-left: 60px; padding-right: 60px;}
+  &-7{padding-left: 72px; padding-right: 72px;}
+}
+.mx{
+  &-1{margin-left: 4px; margin-right: 4px;}
+  &-2{margin-left: 8px; margin-right: 8px;}
+  &-3{margin-left: 16px; margin-right: 16px;}
+  &-4{margin-left: 24px; margin-right: 24px;}
+  &-5{margin-left: 48px; margin-right: 48px;}
+  &-6{margin-left: 60px; margin-right: 60px;}
+}
+
+// section
+.main-holder{
+    overflow-x: hidden;
+}
+
+// liness
+.vert-line{
+  width: 2px;
+  background-color: lighten($clr-orange, 10%);
+  height: 16px;
+  margin: 0 12px;
+}
+.no-wrap{
+  white-space: nowrap;
+}
+
+// overflow 
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
+// title
+.title-md{
+  padding: 1.2rem 2rem 1.2rem 4rem;
+  border-bottom: 1px solid $clr-whitesmoke;
+  background-color: $clr-white;
+  position: relative;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  h3{
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 2.2rem;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: $clr-orange;
+  }
+}

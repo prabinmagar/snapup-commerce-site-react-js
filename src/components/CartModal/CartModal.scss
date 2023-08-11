@@ -1,0 +1,81 @@
+@import "../../App.scss";
+
+.cart-modal{
+    position: absolute;
+    right: -10px;
+    top: calc(100% + 10px);
+    background-color: $clr-white;
+    width: 360px;
+    box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
+    padding: 1.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition-ease;
+    z-index: 99;
+    height: 460px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+        width: 5px;
+
+    }
+    &::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: lighten($clr-light-orange, 5%);
+        outline: 1px solid $clr-light-orange;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 13px solid $clr-white;
+        right: 8px;
+        top: -13px;
+    }
+
+    &-title{
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 12px;
+    }
+
+    &-list{
+        .cart-modal-item{
+            grid-template-columns: 64px auto 65px;
+            column-gap: 12px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            &-img{
+                width: 60px;
+                height: 60px;
+            }
+            &-title{
+                color: rgba(0, 0, 0, 0.85);
+            }
+        }
+    }
+
+    &-empty{
+        img{
+            width: 120px;
+            margin-top: 2rem;
+        }
+        h6{
+            margin-top: 1.6rem;
+        }
+    }
+
+    .view-cart-btn{
+        display: inline-block;
+        width: 200px;
+        padding: 5px 1rem;
+        margin-top: 1.8rem;
+        margin-left: auto;
+        border-radius: 2px;
+    }
+}
